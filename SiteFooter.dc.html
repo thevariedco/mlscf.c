@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/base.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/styles.css">
+  <script src="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/_ds_bundle.js"></script>
+  <style>
+    body { margin: 0; background: var(--surface-canvas); }
+    * { box-sizing: border-box; }
+    @media (max-width: 900px) {
+      [data-footer-grid] { grid-template-columns: 1fr 1fr !important; }
+    }
+    @media (max-width: 520px) {
+      [data-footer-grid] { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</helmet>
+<footer style="background: var(--surface-soft); padding: 80px var(--space-lg) var(--space-xl)">
+  <div data-footer-grid="" style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: var(--space-xxl) var(--space-xl)">
+    <div style="display: flex; flex-direction: column; gap: var(--space-md); min-width: 0">
+      <img src="assets/milescafe-logo-lockup.png" alt="Miles café &amp; co." style="height: 92px; width: auto; align-self: flex-start; display: block">
+      <p style="font: var(--type-body-sm); color: var(--text-muted); max-width: 26em; margin: 0">A mobile barista experience in your space, on your terms.</p>
+      <a href="mailto:hello@milescafe.co?subject=Catering%20inquiry" style="font: var(--type-body-md); color: var(--text-ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--brand-orange); align-self: flex-start" style-hover="color: var(--brand-dark-azure)">hello@milescafe.co</a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm); min-width: 0">
+      <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-ink)">Pages</span>
+      <div style="display: flex; flex-direction: column; gap: var(--space-xs)">
+        <a href="Home.dc.html" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Home</a>
+        <a href="Catering.dc.html" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Catering</a>
+        <a href="Menu.dc.html" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Menu</a>
+        <a href="About.dc.html" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">About us</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm); min-width: 0">
+      <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-ink)">Catering</span>
+      <div style="display: flex; flex-direction: column; gap: var(--space-xs)">
+        <a href="Catering.dc.html#quote" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Get a quote</a>
+        <a href="Catering.dc.html#included" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">What's included</a>
+        <a href="Catering.dc.html#setups" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Bar setups</a>
+        <a href="Catering.dc.html#faq" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Questions</a>
+      </div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: var(--space-sm); min-width: 0">
+      <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-ink)">Follow along</span>
+      <div style="display: flex; flex-direction: column; gap: var(--space-xs)">
+        <a href="https://instagram.com/themilescoffeebar" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Instagram</a>
+        <a href="https://tiktok.com/@milescafe.co" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">TikTok</a>
+        <a href="mailto:hello@milescafe.co" style="font: var(--type-body-sm); color: var(--text-muted); text-decoration: none" style-hover="color: var(--brand-dark-azure)">Email us</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width: var(--container-max); margin: var(--space-xxl) auto 0; padding-top: var(--space-lg); border-top: 1px solid var(--border-hairline); display: flex; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap">
+    <span style="font: var(--type-body-sm); color: var(--text-muted-soft)">© 2026 Miles Café &amp; Co.</span>
+    <span style="font: var(--type-body-sm); color: var(--text-muted-soft)">Poured on site, every time.</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:420}}">class Component extends DCLogic {
+  renderVals() { return {}; }
+}</script>
+</body>
+</html>

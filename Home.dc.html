@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/fonts.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/radius.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/elevation.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/tokens/base.css">
+  <link rel="stylesheet" href="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/styles.css">
+  <script src="_ds/miles-caf-design-system-f38ef900-a0c6-4f0c-9f9e-ae35f79c76e2/_ds_bundle.js"></script>
+  <script src="https://unpkg.com/lucide@0.454.0/dist/umd/lucide.js"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    body { margin: 0; background: var(--surface-canvas); }
+    * { box-sizing: border-box; }
+    a { color: var(--text-ink); }
+    a:hover { color: var(--brand-dark-azure); text-decoration-color: var(--brand-orange); }
+    @media (max-width: 900px) {
+      :root { --space-section: 64px; }
+      [data-band] { grid-template-columns: 1fr !important; }
+      [data-band="hero"] { grid-template-columns: 7fr 5fr !important; }
+      [data-band="steps"] { gap: var(--space-sm) !important; }
+      [data-band="cta"] { padding: var(--space-xxl) var(--space-lg) !important; }
+      [data-sticky] { position: static !important; }
+      h1 { font-size: 44px !important; letter-spacing: -1.5px !important; }
+      h2 { font-size: 32px !important; letter-spacing: -0.8px !important; }
+    }
+    @media (max-width: 640px) {
+      [data-band="hero"] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 560px) {
+      h1 { font-size: 36px !important; }
+      h2 { font-size: 28px !important; }
+    }
+  </style>
+</helmet>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#023f57"/><text x="50" y="50" font-family="Georgia,serif" font-size="34" fill="#fffaf0" text-anchor="middle" dominant-baseline="central">M</text></svg></template>
+<div style="background: var(--surface-canvas); min-height: 100vh">
+  <dc-import name="SiteNav" active="Home" hint-size="100%,64px"></dc-import>
+
+  <sc-if value="{{ isSplit }}" hint-placeholder-val="{{ true }}">
+    <section style="padding: var(--space-section) var(--space-lg) var(--space-xxl)">
+      <div data-band="hero" style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 7fr 5fr; gap: var(--space-xl); align-items: center">
+        <div style="display: flex; flex-direction: column; gap: var(--space-lg); align-items: flex-start">
+          
+          <h1 style="font: var(--type-display-xl); letter-spacing: var(--tracking-display-xl); color: var(--text-ink); margin: 0; max-width: 13em">We'll bring the café experience to you.</h1>
+          <p style="font: 400 18px/1.5 var(--font-sans); color: var(--text-body); max-width: 32em; margin: 0; text-wrap: pretty">A mobile barista experience in your space, on your terms. Ten years behind the bar, packed into a footprint the size of a luxurious coffee cart.</p>
+          <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap">
+            <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="primary" size="lg" href="Catering.dc.html#quote" hint-size="150px,52px">Get a quote</x-import>
+            <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="secondary" size="lg" href="Menu.dc.html" hint-size="150px,52px">See the menu</x-import>
+          </div>
+        </div><x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.HeroIllustrationCard" alt="Miles café landscape illustration" height="{{ 440 }}" hint-size="100%,440px" src="assets/milescafe_co_logo_trsp.png"></x-import>
+        
+      </div>
+    </section>
+  </sc-if>
+
+  <sc-if value="{{ isStacked }}">
+    <section style="padding: var(--space-section) var(--space-lg) var(--space-xxl)">
+      <div style="max-width: 960px; margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-lg); align-items: center; text-align: center">
+        <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted)">Mobile coffee bar</span>
+        <h1 style="font: var(--type-display-xl); letter-spacing: var(--tracking-display-xl); color: var(--text-ink); margin: 0; max-width: 15em">Tell us the headcount. We'll bring the bar.</h1>
+        <p style="font: 400 18px/1.5 var(--font-sans); color: var(--text-body); max-width: 30em; margin: 0; text-wrap: pretty">A mobile barista experience in your space, on your terms — built by people who spent a decade doing it from behind a counter.</p>
+        <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap; justify-content: center">
+          <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="primary" size="lg" href="Catering.dc.html#quote" hint-size="150px,52px">Get a quote</x-import>
+          <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="secondary" size="lg" href="Menu.dc.html" hint-size="150px,52px">See the menu</x-import>
+        </div>
+      </div>
+    </section>
+    <div style="width: 100%; height: 380px; overflow: hidden; background: var(--surface-soft)">
+      <img src="assets/brand-landscape.png" alt="Miles café landscape illustration" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block">
+    </div>
+  </sc-if>
+
+  <section style="padding: var(--space-section) var(--space-lg) 0">
+    <div data-band="" style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: var(--space-xxl); align-items: center">
+      <div style="border-radius: var(--radius-xl); overflow: hidden; height: 420px; background: var(--surface-soft)">
+        <image-slot id="home-story" shape="rect" placeholder="Drop a photo of the old café"></image-slot>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: var(--space-lg); align-items: flex-start">
+        <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted)">Our roots</span>
+        <h2 style="font: var(--type-display-md); letter-spacing: var(--tracking-display-md); color: var(--text-ink); margin: 0; max-width: 18em">We mastered this behind a counter.</h2>
+        <p style="font: var(--type-body-md); font-size: 17px; color: var(--text-body); max-width: 34em; margin: 0; text-wrap: pretty"><b>Miles</b> started as a neighborhood café — the kind where you knew guest's orders before the door opened. Taking the bar mobile didn't change the job. It just means the regulars can be anywhere now: a warehouse, a rooftop, someone's backyard.</p>
+        <p style="font: var(--type-body-md); font-size: 17px; color: var(--text-body); max-width: 34em; margin: 0; text-wrap: pretty">Same hands, same standards, more zip codes.</p>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="textLink" href="About.dc.html" hint-size="120px,24px">Read the whole story</x-import>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-section) var(--space-lg) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-xxl)">
+      <div style="display: flex; flex-direction: column; gap: var(--space-md); max-width: 34em">
+        <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted)">Why us</span>
+        <h2 style="font: var(--type-display-md); letter-spacing: var(--tracking-display-md); color: var(--text-ink); margin: 0">Three things we don't cut corners on.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg)">
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="orange" eyebrow="Hospitality" title="Hosts first, baristas second" body="Eye contact, names remembered, the second cup offered before it's asked for. The drink lasts minutes, the experience is timeless." hint-size="100%,280px"></x-import>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="teal" eyebrow="The bar" title="Fits your floor plan" body="Two tables' worth of footprint, full espresso service. Discreet plumbing, and compact mobile power stations run the show." hint-size="100%,280px"></x-import>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="green" eyebrow="Craft" title="A decade of practice" body="10+ years pulling shots, dialing grinders, whisking matcha. Nothing on our bar is something we're trying for the first time." hint-size="100%,280px"></x-import>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-section) var(--space-lg) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-xxl)">
+      <div style="display: flex; flex-direction: column; gap: var(--space-md); max-width: 34em">
+        <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted)">How it works</span>
+        <h2 style="font: var(--type-display-md); letter-spacing: var(--tracking-display-md); color: var(--text-ink); margin: 0">Three steps, one bar, zero guesswork.</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg)">
+        <div style="display: flex; flex-direction: column; gap: var(--space-md); padding: var(--space-xl); background: var(--surface-canvas); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg)">
+          <span style="font: 300 56px/1 var(--font-sans-grand); color: var(--brand-orange)">01</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">Tell us the details</h3>
+          <p style="font: var(--type-body-md); color: var(--text-body); margin: 0">Headcount, hours, and whatever the venue is going to be weird about. A few sentences is plenty to start.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md); padding: var(--space-xl); background: var(--surface-canvas); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg)">
+          <span style="font: 300 56px/1 var(--font-sans-grand); color: var(--brand-teal)">02</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">We build the bar</h3>
+          <p style="font: var(--type-body-md); color: var(--text-body); margin: 0">A menu and a setup shaped to your room. We have portable equipment to fit all needs. Power and water management included.</p>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--space-md); padding: var(--space-xl); background: var(--surface-canvas); border: 1px solid var(--border-hairline); border-radius: var(--radius-lg)">
+          <span style="font: 300 56px/1 var(--font-sans-grand); color: var(--brand-green)">03</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">We show up early</h3>
+          <p style="font: var(--type-body-md); color: var(--text-body); margin: 0">Set up, pour, break down, and leave the space cleaner than we found it. You don't hear from us until it's over.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-section) var(--space-lg) 0">
+    <div style="max-width: var(--container-max); margin: 0 auto; display: flex; flex-direction: column; gap: var(--space-xxl)">
+      <div style="display: flex; gap: var(--space-lg); align-items: flex-end; justify-content: space-between; flex-wrap: wrap">
+        <div style="display: flex; flex-direction: column; gap: var(--space-md); max-width: 30em">
+          <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted)">Featured</span>
+          <h2 style="font: var(--type-display-md); letter-spacing: var(--tracking-display-md); color: var(--text-ink); margin: 0">What people ask for twice.</h2>
+        </div>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="secondary" href="Menu.dc.html" hint-size="150px,44px">See the full menu</x-import>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--space-lg)">
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="cream" hint-size="100%,360px">
+          <div style="height: 170px; border-radius: var(--radius-md); overflow: hidden; background: var(--surface-strong)">
+            <image-slot id="home-drink-1" shape="rect" placeholder="Drop a drink photo"></image-slot>
+          </div>
+          <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--brand-orange)">Seasonal</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">Honey lavender latte</h3>
+          <p style="font: var(--type-body-sm); color: var(--text-body); margin: 0">Steeped lavender, local honey, a shot that can hold its own against both.</p>
+        </x-import>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="cream" hint-size="100%,360px">
+          <div style="height: 170px; border-radius: var(--radius-md); overflow: hidden; background: var(--surface-strong)">
+            <image-slot id="home-drink-2" shape="rect" placeholder="Drop a drink photo"></image-slot>
+          </div>
+          <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--brand-teal)">Coffee</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">Brown sugar shakerato</h3>
+          <p style="font: var(--type-body-sm); color: var(--text-body); margin: 0">Shaken cold until it foams. The one that converts the tea drinkers.</p>
+        </x-import>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="cream" hint-size="100%,360px">
+          <div style="height: 170px; border-radius: var(--radius-md); overflow: hidden; background: var(--surface-strong)">
+            <image-slot id="home-drink-3" shape="rect" placeholder="Drop a drink photo"></image-slot>
+          </div>
+          <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--brand-green)">Matcha &amp; iced teas</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">Iced ceremonial matcha</h3>
+          <p style="font: var(--type-body-sm); color: var(--text-body); margin: 0">Whisked by hand, one bowl at a time. Never scooped from a jug.</p>
+        </x-import>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.FeatureCard" tone="cream" hint-size="100%,360px">
+          <div style="height: 170px; border-radius: var(--radius-md); overflow: hidden; background: var(--surface-strong)">
+            <image-slot id="home-drink-4" shape="rect" placeholder="Drop a drink photo"></image-slot>
+          </div>
+          <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--brand-honey)">Refreshers</span>
+          <h3 style="font: var(--type-title-md); color: var(--text-ink); margin: 0">Blood orange refresher</h3>
+          <p style="font: var(--type-body-sm); color: var(--text-body); margin: 0">For the guests who've had enough caffeine and still want something good.</p>
+        </x-import>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" style="padding: var(--space-section) var(--space-lg) 0">
+    <div data-band="" style="max-width: var(--container-max); margin: 0 auto; display: grid; grid-template-columns: 5fr 7fr; gap: var(--space-xxl); align-items: start">
+      <div style="display: flex; flex-direction: column; gap: var(--space-lg); align-items: flex-start; position: sticky; top: 96px" data-sticky="">
+        <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted)">Pricing</span>
+        <h2 style="font: var(--type-display-md); letter-spacing: var(--tracking-display-md); color: var(--text-ink); margin: 0; max-width: 16em">Every room prices differently.</h2>
+        <p style="font: var(--type-body-md); font-size: 17px; color: var(--text-body); max-width: 30em; margin: 0; text-wrap: pretty">Headcount, hours, customizations and how far we're driving move the number more than anything on the menu does. Answer a few questions and we'll send a real figure — not a range.</p>
+        <div style="display: flex; flex-direction: column; gap: var(--space-xs)">
+          <span style="font: var(--type-body-sm); color: var(--text-body)">Most events land between 2 and 4 hours of service.</span>
+          <span style="font: var(--type-body-sm); color: var(--text-body)">Two baristas past 60 guests.</span>
+          <span style="font: var(--type-body-sm); color: var(--text-body)">Signature drinks can be made on request.*</span>
+        </div>
+      </div>
+      <div style="border: 1px solid var(--border-hairline); border-radius: var(--radius-xl); background: var(--surface-soft); padding: var(--space-xxl); display: flex; flex-direction: column; gap: var(--space-lg); align-items: center; text-align: center; min-height: 420px; justify-content: center">
+        <span style="font: var(--type-caption-uppercase); letter-spacing: var(--tracking-caps); text-transform: uppercase; color: var(--text-muted-soft)">Placeholder — quote form embed</span>
+        <h3 style="font: var(--type-display-sm); letter-spacing: var(--tracking-display-sm); color: var(--text-ink); margin: 0; max-width: 20em">The lead form drops in here.</h3>
+        <p style="font: var(--type-body-md); color: var(--text-muted); max-width: 26em; margin: 0">Paste the embed snippet from your form tool into this frame — it inherits the cream field and 24px radius as-is.</p>
+        <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="primary" href="mailto:hello@milescafe.co?subject=Catering%20quote" hint-size="150px,44px">Email us instead</x-import>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding: var(--space-section) var(--space-lg) var(--space-section)">
+    <div data-band="cta" style="max-width: var(--container-max); margin: 0 auto; background: var(--surface-soft); border-radius: var(--radius-xl); padding: 80px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--space-xxl); align-items: center">
+      <div style="display: flex; flex-direction: column; gap: var(--space-lg); align-items: flex-start">
+        <h2 style="font: var(--type-display-md); letter-spacing: var(--tracking-display-md); color: var(--text-ink); margin: 0; max-width: 16em">Let's put a bar in your room.</h2>
+        <p style="font: var(--type-body-md); font-size: 17px; color: var(--text-body); max-width: 30em; margin: 0">Send us the date and the headcount. We'll come back with a menu, a setup, and a number.</p>
+        <div style="display: flex; gap: var(--space-sm); flex-wrap: wrap">
+          <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="primary" size="lg" href="mailto:hello@milescafe.co?subject=Catering%20quote" hint-size="150px,52px">Get a quote</x-import>
+          <x-import component-from-global-scope="MilesCafDesignSystem_f38ef9.Button" variant="secondary" size="lg" href="Catering.dc.html" hint-size="150px,52px">How catering works</x-import>
+        </div>
+      </div>
+      <div style="border-radius: var(--radius-lg); overflow: hidden; height: 280px; background: var(--surface-card)">
+        <image-slot id="home-cta" shape="rect" placeholder="Drop a photo of the cart"></image-slot>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="SiteFooter" hint-size="100%,420px"></dc-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroVariant&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;split&quot;,&quot;stacked&quot;],&quot;default&quot;:&quot;split&quot;,&quot;tsType&quot;:&quot;'split' | 'stacked'&quot;,&quot;section&quot;:&quot;Hero&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() { if (window.lucide) window.lucide.createIcons(); }
+  renderVals() {
+    const v = this.props.heroVariant ?? "split";
+    return { isSplit: v === "split", isStacked: v === "stacked" };
+  }
+}
+</script>
+</body>
+</html>
